@@ -62,8 +62,11 @@ class AskNicelySnippetProvider implements SnippetProvider
             'email_hash' => hash_hmac('sha256', $email, $params['HashKey']),
             'created' => $createdTime,
             'mode' => 'docked',
-            'force' => 1,
         ];
+
+        if ($params['Force']) {
+            $settings['force'] = true;
+        }
 
         if ($params['Segment']) {
             $settings['segment'] = $params['Segment'];
