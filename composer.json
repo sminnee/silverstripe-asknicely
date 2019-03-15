@@ -1,7 +1,7 @@
 {
     "name": "sminnee/silverstripe-asknicely",
     "description": "Adds an AskNicely NPS Web Survey to your site.",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "require": {
         "silverstripe/framework": "^4",
         "sminnee/tagmanager": "^1"
