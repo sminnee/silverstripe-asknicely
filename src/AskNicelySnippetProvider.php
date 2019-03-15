@@ -3,7 +3,7 @@
 namespace Sminnee\AskNicely;
 
 use SilverStripe\TagManager\SnippetProvider;
-use Forms\FieldList;
+use SilverStripe\Forms;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Security\Member;
 
