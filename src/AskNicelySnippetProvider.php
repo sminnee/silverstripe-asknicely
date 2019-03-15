@@ -3,8 +3,9 @@
 namespace Sminnee\AskNicely;
 
 use SilverStripe\TagManager\SnippetProvider;
-use FieldList;
-use Member;
+use Forms\FieldList;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Security\Member;
 
 /**
  * A snippet provider that lets you add arbitrary HTML
@@ -20,15 +21,15 @@ class AskNicelySnippetProvider implements SnippetProvider
     public function getParamFields()
     {
         return new FieldList(
-            \TextField::create("DomainKey", "Domain Key")
+            Forms\TextField::create("DomainKey", "Domain Key")
                 ->setDescription("'XXX' in 'XXX.asknice.ly'"),
-            \TextField::create("HashKey", "Email Hashing Key")
+            Forms\TextField::create("HashKey", "Email Hashing Key")
                 ->setDescription("Visit /setting/recommend/inapp in AskNicely"),
-            \TextField::create("Segment", "Add to the following AskNicely segment"),
-            \HeaderField::create("", "Debugging"),
-            \CheckboxField::create("Force", "Force display")
+            Forms\TextField::create("Segment", "Add to the following AskNicely segment"),
+            Forms\HeaderField::create("", "Debugging"),
+            Forms\CheckboxField::create("Force", "Force display")
                 ->setDescription("Useful in debugging. Don't run in production!"),
-            \TextField::create("ForceEmail", "Always use this email address")
+            Forms\TextField::create("ForceEmail", "Always use this email address")
                 ->setDescription("Useful in debugging. Don't run in production!")
         );
     }
