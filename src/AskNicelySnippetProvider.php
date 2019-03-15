@@ -45,12 +45,10 @@ class AskNicelySnippetProvider implements SnippetProvider
             $email = $params['ForceEmail'];
             $name = "Forced Email";
             $createdTime = time();
-
         } elseif ($member = Member::currentUser()) {
             $email = $member->Email;
             $name = $member->FirstName . ' ' . $member->Surname;
             $createdTime = strtotime($member->Created);
-
         } else {
             return [];
         }
@@ -79,7 +77,7 @@ class AskNicelySnippetProvider implements SnippetProvider
 <script type="text/javascript" >
     window.asknicelySettings = $settingsJson;
 </script>
-<script type="text/javascript" async src="https://live.asknice.ly/widgetv2.js"> </script>
+<script type="text/javascript" async src="//static.asknice.ly/js/websurvey.min.js"></script>
 HTML;
 
         return [
