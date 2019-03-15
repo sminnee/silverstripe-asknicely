@@ -5,4 +5,5 @@ This add an AskNicely web survey to the bottom of your website. It relies on the
 
 Requirements:
 
- * SilverStripe 3 (SilverStripe 4 version coming soon!)
+ * SilverStripe 4.x
+ * sminnee/tagmanager 1.x
