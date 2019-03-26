@@ -36,7 +36,11 @@ class AskNicelySnippetProvider implements SnippetProvider
 
     public function getSummary(array $params)
     {
-        return $this->getTitle() . " in  " . $params['Zone'];
+        if (isset($params['DomainKey'])) {
+            return $this->getTitle() . " -  " . $params['DomainKey'] . ".asknice.ly";
+        } else {
+            return $this->getTitle();
+        }
     }
 
     public function getSnippets(array $params)
